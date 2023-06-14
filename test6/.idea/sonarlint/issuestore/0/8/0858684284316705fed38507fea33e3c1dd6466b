@@ -1,0 +1,20 @@
+
+q
+java:S1104"TMake jb_Start a static final constant or non-public and provide accessors if needed.(ƒ™Æ8ªÔÀéŠ1
+k	java:S116"VRename this field "label_Count" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Û‹Ì
+n	java:S116"TRename this field "label_Pwd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êüúÿÿÿÿ
+m	java:S116"SRename this field "jt_Count" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÚî¯üÿÿÿÿ
+k	java:S116"QRename this field "jt_Pwd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö´ºÿÿÿÿÿ
+y	java:S116"XRename this field "label_backPwd" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è»Åüÿÿÿÿ8·ÔÀéŠ1
+u	java:S116"TRename this field "jb_singIn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªƒùøÿÿÿÿ8·ÔÀéŠ1
+o	java:S116"SRename this field "jb_Start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ™Æ8·ÔÀéŠ1
+l	java:S116"QRename this field "jb_Try" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹×ö(8·ÔÀéŠ1
+X	java:S125"<This block of commented-out lines of code should be removed.(ò­ªİ8»ÔÀéŠ1
+V	java:S125"<This block of commented-out lines of code should be removed.(’±¹üÿÿÿÿ
+]	java:S125$"<This block of commented-out lines of code should be removed.(¾ª—úÿÿÿÿ8½ÔÀéŠ1
+i	java:S100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÂŸV8ÁÔÀéŠ1
+X
+java:S1854z"6Remove this useless assignment to local variable "si".(÷äÕÔùÿÿÿÿ8ÂÔÀéŠ1
+]	java:S125v"<This block of commented-out lines of code should be removed.(åÈûâøÿÿÿÿ8ßÔÀéŠ1
+I
+java:S1481z"'Remove this unused "si" local variable.(÷äÕÔùÿÿÿÿ8âÔÀéŠ1

@@ -1,0 +1,14 @@
+
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(éã£ã
+Z
+java:S2583""DChange this condition so that it does not always evaluate to "false"(±”Ìï
+P
+java:S1118":Add a private constructor to hide the implicit public one.(öûí´
+Q
+java:S6437"6Revoke and change this password, as it is compromised.(’àŒµüÿÿÿÿ
+E
+java:S1481"*Remove this unused "count" local variable.(ŒÕĞĞúÿÿÿÿ
+b	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÅ”Q
+Q
+java:S6437B"6Revoke and change this password, as it is compromised.(’àŒµüÿÿÿÿ

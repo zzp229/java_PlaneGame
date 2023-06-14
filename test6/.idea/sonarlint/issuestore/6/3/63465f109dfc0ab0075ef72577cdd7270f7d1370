@@ -1,0 +1,31 @@
+
+E
+java:S2189ώ""Add an end condition to this loop.(οÿÿÿÿÿ8»½μι1
+s	java:S116~"RRename this field "is_Pend" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ξ¨Άϋÿÿÿÿ8Ό½μι1
+F
+java:S1948"$Make "bg" transient or serializable.(½ΠΗ»ώÿÿÿÿ8Ύ½μι1
+I
+java:S1948"'Make "plane" transient or serializable.(†Ό„“ώÿÿÿÿ8Ύ½μι1
+S
+java:S1948ο"0Make "offScreenImage" transient or serializable.(²ΰÒΚψÿÿÿÿ8Ύ½μι1
+{
+java:S21422"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€8Α½μι1
+]	java:S1254"<This block of commented-out lines of code should be removed.(ώΠεδϊÿÿÿÿ8Β½μι1
+]	java:S125m"<This block of commented-out lines of code should be removed.(ΰυόÿÿÿÿ8Δ½μι1
+]	java:S125t"<This block of commented-out lines of code should be removed.(Σ‚Ψ€ψÿÿÿÿ8Δ½μι1
+p
+java:S3776‚"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(¶ψΒΑ8Ε½μι1
+X
+java:S1854³":Remove this useless assignment to local variable "period".(ε“χ8Ε½μι1
+Y
+java:S1117³";Rename "period" which hides the field declared at line 112.(ε“χ8Ζ½μι1
+I
+java:S1481³"+Remove this unused "period" local variable.(ε“χ8Ζ½μι1
+Y
+java:S1117Β";Rename "period" which hides the field declared at line 112.(ε“χ8Η½μι1
+Y	java:S125ΰ"<This block of commented-out lines of code should be removed.(ιάχ8Ι½μι1
+^	java:S125ι"<This block of commented-out lines of code should be removed.(Ω ³®ϊÿÿÿÿ8Κ½μι1
+X
+java:S1161ς":Add the "@Override" annotation above this method signature(ζμΡΊ8Κ½μι1
+|
+java:S2142‡"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€8Λ½μι1
