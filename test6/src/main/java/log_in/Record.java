@@ -77,7 +77,7 @@ public class Record extends JFrame implements ActionListener {
     public void init(){
         jTextArea.setText(null);
         jt_Count.setText(null);
-        jTextArea.setText("分数     在线时间\n");
+        jTextArea.setText("分数       在线时间\n");
     }
 
     //接口ActionListener的方法重写
@@ -94,7 +94,7 @@ public class Record extends JFrame implements ActionListener {
                }
                //添加到滚动条
                scrollPane = new JScrollPane(jTextArea);
-                scrollPane.setBounds(100, 45, 200, 300);
+                scrollPane.setBounds(100, 45, 220, 300);
                 scrollPane.setFont(new Font("宋体", Font.BOLD, 13));
                 panel.add(scrollPane);
            }

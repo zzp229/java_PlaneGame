@@ -11,6 +11,8 @@ public class Current_account {
     public static int id;
     public static int score;
 
+    //public boolean runned = false;  //标记
+
     public static List<String> record_List = new LinkedList<String>();
 
     public static List<String> highest = null;

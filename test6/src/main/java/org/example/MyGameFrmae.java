@@ -206,7 +206,7 @@ public class MyGameFrmae extends Frame implements Runnable {
             if (if_Insert == true) {    //--
                 Current_account.score = period; //记录分数  /////
                 Sql.record_Score(Current_account.account, Current_account.score);   //--
-                System.out.println("类MyGrameFrame" + "账号" + Current_account.account + "   分数" + Current_account.score);
+                //System.out.println("类MyGrameFrame" + "账号" + Current_account.account + "   分数" + Current_account.score);
                 Sql.update_record(Current_account.account); //把最高分表更新一遍
                 if_Insert = false;
             }

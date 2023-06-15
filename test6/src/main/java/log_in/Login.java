@@ -15,7 +15,7 @@ public class Login extends JFrame implements ActionListener {
     JLabel label_Count = new JLabel("账号:");
     JLabel label_Pwd = new JLabel("密码:");
     JTextField jt_Count = new JTextField();
-    JTextField jt_Pwd = new JTextField();
+    JPasswordField jt_Pwd = new JPasswordField();
 
     //登录按钮下面的
     JLabel label_backPwd = new JLabel("找回密码");
@@ -67,13 +67,13 @@ public class Login extends JFrame implements ActionListener {
         jb_Start.addActionListener(this);	//添加监听
 
         //历史记录按钮
-        jb_record.setBounds(120, 230, 80, 20);
+        jb_record.setBounds(100, 230, 80, 20);
         jb_record.setFont(new Font("宋体", Font.PLAIN, 10));
         jb_record.addActionListener(this);
         jP.add(jb_record);
 
         //排行榜
-        jb_leaderBoard.setBounds(250, 230, 80, 20);
+        jb_leaderBoard.setBounds(225, 230, 80, 20);
         jb_leaderBoard.setFont(new Font("宋体", Font.PLAIN, 10));
         jb_leaderBoard.addActionListener(this);
         jP.add(jb_leaderBoard);
@@ -117,8 +117,8 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource().equals(jb_Start)) {	//登录按钮
-            jt_Count.setText("4");
-            jt_Pwd.setText("4");
+//            jt_Count.setText("ui");
+//            jt_Pwd.setText("ui");
             int status = Sql.if_Exist(jt_Count.getText(), jt_Pwd.getText());  //(0是没有这个账号，1是有账号但是密码不对，2是可以的)
             if (status == 0){
                 JOptionPane.showMessageDialog(tmp, "您还没有注册账号，请先注册", "弹出窗口", JOptionPane.INFORMATION_MESSAGE);
@@ -129,15 +129,10 @@ public class Login extends JFrame implements ActionListener {
 
                 frame.launchFrame();
 
-                jb_Start.setText("登录成功！");
-                //Current_account.account = jt_Count.getText();   //得到账号
-                //frame.launchFrame();
+                jb_Start.setText("再来一局！");
+
                 //创建表
                 Current_account.account = jt_Count.getText();   //记录账号，方便记录游戏
-
-                //test
-                //Sql.update_record("22");
-                //Sql.record_Score("a3", 8);   //插不进去
 
             }
 

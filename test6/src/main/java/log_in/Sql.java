@@ -216,15 +216,22 @@ public class Sql {
             conn = DriverManager.getConnection(url, "root", "123456");
 
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("select * from log_in " + "where account =" + account);
-            rs.next();  //移动游标
-            String s = rs.getString(3);
-            int tmp = Integer.parseInt(s);
 
-            System.out.println("游标的数： " + tmp);
+            rs = stmt.executeQuery("select * from log_in " + "where account = '" + account + "'");
+            //rs = stmt.executeQuery("select * from log_in where account = 'hy';");
+            rs.next();  //移动游标，下一个才是数据
+            //String s = rs.getString(3);
+            //int tmp = Integer.parseInt(s);
+
+            //System.out.println("游标的数： " + tmp);
+
+            int tmp = rs.getInt(3); //第三个是int
+
+
+
             //如果大的就更新最高分
             if (Current_account.score > tmp) {
-                System.out.println("-----------------");
+                //System.out.println("-----------------");
                 //使用PreparedStatement带参数sql语句编程
                 //update log_in set bestScore=0 where account='4';
                 String sql = "update log_in set bestScore = ? where account = ?"; ////

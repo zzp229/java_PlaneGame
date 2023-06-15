@@ -11,7 +11,7 @@ public class Sign_in extends JFrame implements ActionListener {
     JLabel label_Count = new JLabel("请输入账号:");
     JLabel label_Pwd = new JLabel("请输入密码:");
     JTextField jt_Count = new JTextField();
-    JTextField jt_Pwd = new JTextField();
+    JPasswordField jt_Pwd = new JPasswordField();
 
     //定义按钮
     JButton jb_SingIn = new JButton("注册");
@@ -79,14 +79,35 @@ public class Sign_in extends JFrame implements ActionListener {
         return jP;
     }
 
+    //判断账户和密码的长度是否合法
+    private boolean check(){
+        //是否为空
+        if (this.jt_Count.getText().length() == 0 || this.jt_Pwd.getText().length() == 0) {
+            JOptionPane.showMessageDialog(jPanel, "账号和密码不能为空", "注册失败", JOptionPane.INFORMATION_MESSAGE);
+            return false;
+        }
+
+        //验证长度
+        if (this.jt_Count.getText().length() > 20 || this.jt_Pwd.getText().length() > 20) {
+            JOptionPane.showMessageDialog(jPanel, "账号和密码的长度不能超过20", "注册失败", JOptionPane.INFORMATION_MESSAGE);
+            return false;
+        }
+
+        //验证这个用户
+        if (Sql.signIn(jt_Count.getText(), jt_Pwd.getText()) == false) {
+            JOptionPane.showMessageDialog(jPanel, "这个账号已被注册，请重新注册", "注册错误", JOptionPane.INFORMATION_MESSAGE);
+            return false;
+        }
+        return true;
+    }
+
     //接口ActionListener的方法重写
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(jb_SingIn)) {	//注册按钮
-            if (Sql.signIn(jt_Count.getText(), jt_Pwd.getText()) == false) {
-                //弹窗
-                JOptionPane.showMessageDialog(jPanel, "这个账号已被注册，请重新注册", "注册错误", JOptionPane.INFORMATION_MESSAGE);
-                //将文本框初始化
+
+            if (check() == false) {
+                 //将文本框初始化
                 clear_TextField();
             } else {
                 //创建这个表的时候要看看有没有这个用户先
