@@ -119,8 +119,11 @@ public class Login extends JFrame implements ActionListener {
         if (e.getSource().equals(jb_Start)) {	//登录按钮
 //            jt_Count.setText("ui");
 //            jt_Pwd.setText("ui");
+
+//            if (jt_Count.getText().length() == 0 || )
+
             int status = Sql.if_Exist(jt_Count.getText(), jt_Pwd.getText());  //(0是没有这个账号，1是有账号但是密码不对，2是可以的)
-            if (status == 0){
+            if (status == 0) {
                 JOptionPane.showMessageDialog(tmp, "您还没有注册账号，请先注册", "弹出窗口", JOptionPane.INFORMATION_MESSAGE);
             } else if (status == 1) {
                 JOptionPane.showMessageDialog(tmp, "密码错误", "弹出窗口", JOptionPane.INFORMATION_MESSAGE);

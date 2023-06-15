@@ -104,11 +104,15 @@ public class Sql {
             conn = DriverManager.getConnection(url,user,password);
             stmt = conn.createStatement();
 
+
+
             String sql = "CREATE TABLE " + account +
                     "(date DateTime DEFAULT NOW(), " +
                     "score INT)";
 
             stmt.executeUpdate(sql);
+
+
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.regex.Pattern;
 
 public class Sign_in extends JFrame implements ActionListener {
     //显示时间
@@ -90,6 +91,13 @@ public class Sign_in extends JFrame implements ActionListener {
         //验证长度
         if (this.jt_Count.getText().length() > 20 || this.jt_Pwd.getText().length() > 20) {
             JOptionPane.showMessageDialog(jPanel, "账号和密码的长度不能超过20", "注册失败", JOptionPane.INFORMATION_MESSAGE);
+            return false;
+        }
+
+        String tmp = "^[A-Za-z0-9]+$";
+        //正则表达式限定字母和数字，这个要完善验证只有密码和数字
+        if (Pattern.matches(tmp ,jt_Count.getText()) == false || Pattern.matches(tmp, jt_Pwd.getText()) == false ){
+            JOptionPane.showMessageDialog(jPanel, "账号和密码必须是数字和字母组成", "注册错误", JOptionPane.INFORMATION_MESSAGE);
             return false;
         }
 
