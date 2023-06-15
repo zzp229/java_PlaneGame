@@ -166,9 +166,9 @@ public class Sql {
             }
 
             //返回account账户的记录
-            rs = stmt.executeQuery("select  * from a" + account);    //这个是返回的值
+            rs = stmt.executeQuery("select  * from a" + account + " order by date desc;");    //这个是返回的值
             while (rs.next()){
-                Current_account.record_List.add(rs.getString(2) + "   " + rs.getString(1));
+                Current_account.record_List.add(" "  + rs.getString(2) + "   " + rs.getString(1));
             }
 
         } catch (SQLException e){
@@ -180,6 +180,7 @@ public class Sql {
     }
 
 
+    /////这里需要更改
     //这个是获取最高分表
     public static void best_record(){
         Connection conn = null;
@@ -191,10 +192,10 @@ public class Sql {
             conn = DriverManager.getConnection(url, "root", "123456");
 
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("select * from log_in");
+            rs = stmt.executeQuery("select * from log_in order by bestScore desc"); /////这个增加排序和修改类型后的
             Current_account.highest = new LinkedList<String>(); //初始化最高分集合
             while (rs.next()){
-                Current_account.highest.add(rs.getString(1) + "\t\t" + rs.getString(3));
+                Current_account.highest.add(rs.getString(1) + "\t\t" + rs.getInt(3));
             }
 
         } catch (SQLException e){
@@ -224,10 +225,12 @@ public class Sql {
             //如果大的就更新最高分
             if (Current_account.score > tmp) {
                 System.out.println("-----------------");
-                //使用PreparedStatement带参数sql语句编程(课本313页)
-                String sql = "update log_in set bestScore = ? where account = ?;"; ////
+                //使用PreparedStatement带参数sql语句编程
+                //update log_in set bestScore=0 where account='4';
+                String sql = "update log_in set bestScore = ? where account = ?"; ////
                 PreparedStatement ptmt = conn.prepareStatement(sql);
-                ptmt.setString(1, String.valueOf(Current_account.score));
+                //ptmt.setString(1, String.valueOf(Current_account.score));
+                ptmt.setInt(1, Current_account.score);  /////这里变得插入int类型
                 ptmt.setString(2, account);
                 //执行sql，返回影响条数
                 int count = ptmt.executeUpdate();   //executeUpdate用来执行insert，delete，update

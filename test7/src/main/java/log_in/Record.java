@@ -37,7 +37,7 @@ public class Record extends JFrame implements ActionListener {
         c.add(panel);
 
 
-        this.setSize(400, 300);
+        this.setSize(400, 450);
         this.setUndecorated(false);
         this.setLocationRelativeTo(null);
         this.setVisible(true);

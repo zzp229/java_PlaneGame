@@ -14,4 +14,5 @@ public class Current_account {
     public static List<String> record_List = new LinkedList<String>();
 
     public static List<String> highest = null;
+    //public static List<Integer> highest = null;
 }
